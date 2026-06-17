@@ -2,6 +2,9 @@
 
 A complete production-ready MERN stack e-commerce application.
 
+## Additional Resources
+- **Project Assets**: [Google Drive Folder](https://drive.google.com/drive/folders/13NVyxgM_bNPe9JpoHSEws174oeA7kldt)
+
 ## Features
 - User Authentication (JWT)
 - Role-based Access (Admin / User)
@@ -99,6 +102,3 @@ Sample endpoints:
 - `GET /api/products` - Fetch all products
 - `POST /api/orders` - Place a new order (requires Auth)
 - `GET /api/cart` - View user cart (requires Auth)
-
-## Additional Resources
-- **Project Assets**: [Google Drive Folder](https://drive.google.com/drive/folders/13NVyxgM_bNPe9JpoHSEws174oeA7kldt)
