@@ -91,13 +91,13 @@ const Checkout = () => {
                         {cart.products.map(item => (
                             <div key={item.productId._id} className="d-flex justify-content-between mb-2">
                                 <span>{item.productId.name} x {item.quantity}</span>
-                                <span>${(item.productId.price * item.quantity).toFixed(2)}</span>
+                                <span>₹{(item.productId.price * item.quantity).toFixed(2)}</span>
                             </div>
                         ))}
                         <hr />
                         <div className="d-flex justify-content-between mb-2">
                             <span className="fw-bold">Total</span>
-                            <span className="fw-bold text-primary">${total.toFixed(2)}</span>
+                            <span className="fw-bold text-primary">₹{total.toFixed(2)}</span>
                         </div>
                     </div>
                 </div>

@@ -26,13 +26,11 @@ const Cart = () => {
                         <div className="card mb-3 p-3" key={item.productId._id}>
                             <div className="row align-items-center">
                                 <div className="col-md-3">
-                                    <div style={{height: '80px', backgroundColor: '#e9ecef', borderRadius: '8px'}} className="d-flex align-items-center justify-content-center">
-                                        <span className="text-muted small">Image</span>
-                                    </div>
+                                    <img src={item.productId.image} alt={item.productId.name} className="img-fluid rounded" style={{height: '80px', width: '100%', objectFit: 'cover'}} />
                                 </div>
                                 <div className="col-md-4">
                                     <h5 className="fw-bold">{item.productId.name}</h5>
-                                    <p className="text-muted mb-0">${item.productId.price.toFixed(2)}</p>
+                                    <p className="text-muted mb-0">₹{item.productId.price.toFixed(2)}</p>
                                 </div>
                                 <div className="col-md-3">
                                     <input 
@@ -55,7 +53,7 @@ const Cart = () => {
                         <h4 className="fw-bold mb-3">Order Summary</h4>
                         <div className="d-flex justify-content-between mb-2">
                             <span>Subtotal</span>
-                            <span>${total.toFixed(2)}</span>
+                            <span>₹{total.toFixed(2)}</span>
                         </div>
                         <div className="d-flex justify-content-between mb-2">
                             <span>Shipping</span>
@@ -64,7 +62,7 @@ const Cart = () => {
                         <hr />
                         <div className="d-flex justify-content-between mb-4">
                             <span className="fw-bold">Total</span>
-                            <span className="fw-bold text-primary">${total.toFixed(2)}</span>
+                            <span className="fw-bold text-primary">₹{total.toFixed(2)}</span>
                         </div>
                         <button className="btn btn-primary w-100 fw-bold" onClick={() => navigate('/checkout')}>Proceed to Checkout</button>
                     </div>

@@ -30,14 +30,12 @@ const ProductDetails = () => {
             <Link to="/products" className="btn btn-outline-secondary mb-4">Back to Products</Link>
             <div className="row">
                 <div className="col-md-6 mb-4">
-                    <div style={{height: '400px', backgroundColor: '#e9ecef', borderRadius: '12px'}} className="d-flex align-items-center justify-content-center">
-                        <h4 className="text-muted">{product.name} Image</h4>
-                    </div>
+                    <img src={product.image} alt={product.name} className="img-fluid w-100" style={{height: '400px', objectFit: 'cover', borderRadius: '12px'}} />
                 </div>
                 <div className="col-md-6">
                     <h2 className="fw-bold mb-3">{product.name}</h2>
                     <span className="badge bg-primary mb-3">{product.category}</span>
-                    <h3 className="text-primary fw-bold mb-3">${product.price.toFixed(2)}</h3>
+                    <h3 className="text-primary fw-bold mb-3">₹{product.price.toFixed(2)}</h3>
                     <p className="lead">{product.description}</p>
                     <hr />
                     <p><strong>Brand:</strong> {product.brand}</p>

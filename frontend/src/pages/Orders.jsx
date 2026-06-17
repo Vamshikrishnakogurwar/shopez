@@ -42,7 +42,7 @@ const Orders = () => {
                                 <tr key={order._id}>
                                     <td>{order._id}</td>
                                     <td>{new Date(order.createdAt).toLocaleDateString()}</td>
-                                    <td>${order.totalAmount.toFixed(2)}</td>
+                                    <td>₹{order.totalAmount.toFixed(2)}</td>
                                     <td>
                                         <span className={`badge ${order.orderStatus === 'Delivered' ? 'bg-success' : 'bg-warning text-dark'}`}>
                                             {order.orderStatus}

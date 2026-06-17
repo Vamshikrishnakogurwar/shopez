@@ -61,7 +61,7 @@ const AdminDashboard = () => {
         labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [
             {
-                label: 'Sales ($)',
+                label: 'Sales (₹)',
                 data: [1200, 1900, 3000, 5000, 2000, 3000],
                 backgroundColor: 'rgba(79, 70, 229, 0.6)',
             }
@@ -111,7 +111,7 @@ const AdminDashboard = () => {
                 </div>
                 <div className="col-md-3 mb-3">
                     <div className="card text-center p-4 bg-danger text-white">
-                        <h3>${stats.revenue.toFixed(2)}</h3>
+                        <h3>₹{stats.revenue.toFixed(2)}</h3>
                         <p className="mb-0">Total Revenue</p>
                     </div>
                 </div>

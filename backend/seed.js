@@ -37,11 +37,17 @@ const products = [
     { name: 'Soccer Ball', description: 'Official size soccer ball', category: 'Sports', brand: 'Adidas', price: 29.99, stock: 150 }
 ];
 
+// Add random images to products
+const productsWithImages = products.map((p, index) => ({
+    ...p,
+    image: `https://picsum.photos/seed/${index + 1}/400/400`
+}));
+
 // Import data
 const importData = async () => {
     try {
         await Product.deleteMany();
-        await Product.insertMany(products);
+        await Product.insertMany(productsWithImages);
         console.log('Data Imported...');
         process.exit();
     } catch (err) {

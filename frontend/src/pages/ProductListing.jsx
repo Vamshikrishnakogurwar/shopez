@@ -55,13 +55,11 @@ const ProductListing = () => {
                     {products.map((product) => (
                         <div className="col-md-4 col-sm-6" key={product._id}>
                             <div className="card h-100 p-3">
-                                <div style={{height: '200px', backgroundColor: '#e9ecef', borderRadius: '8px'}} className="d-flex align-items-center justify-content-center mb-3">
-                                    <span className="text-muted">{product.name} Image</span>
-                                </div>
+                                <img src={product.image} alt={product.name} className="img-fluid" style={{height: '200px', objectFit: 'cover', borderRadius: '8px 8px 0 0', width: '100%'}} />
                                 <div className="card-body p-0">
                                     <h5 className="card-title fw-bold">{product.name}</h5>
                                     <p className="card-text text-muted mb-2">{product.category}</p>
-                                    <h6 className="fw-bold text-primary">${product.price.toFixed(2)}</h6>
+                                    <h6 className="fw-bold text-primary">₹{product.price.toFixed(2)}</h6>
                                     <Link to={`/products/${product._id}`} className="btn btn-outline-primary btn-sm w-100 mt-2">View Details</Link>
                                 </div>
                             </div>
